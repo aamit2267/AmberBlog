@@ -1,0 +1,33 @@
+{% extends 'basic.html' %}
+{% block title %} SignUp {% endblock title %}
+{% block body %}
+<div class="container my-3">
+<h3>SignUp</h3>
+<form action="/handlesignup" method="post">
+<div class="mb-3">
+  <label for="name FormControlInput1" class="form-label">Name</label>
+  <input type="text" class="form-control" id="name exampleFormControlInput1" name="name" placeholder="Enter your name" required>
+</div>
+<div class="mb-3">
+  <label for="username FormControlInput1" class="form-label">Username</label>
+  <input type="text" class="form-control" id="username exampleFormControlInput1" name="username" placeholder="Enter your unique username" required>
+</div>
+<div class="mb-3">
+  <label for="email FormControlInput1" class="form-label">Email Address</label>
+  <input type="email" class="form-control" id="email exampleFormControlInput1" name="email" placeholder="Enter your email address" required>
+</div>
+<div class="mb-3">
+  <label for="password FormControlInput1" class="form-label">Password</label>
+  <input type="password" class="form-control" id="password exampleFormControlInput1" name="password" placeholder="Enter your Password" required>
+</div>
+<div class="mb-3">
+  <label for="cnfpassword FormControlInput1" class="form-label">Confirm Password</label>
+  <input type="password" class="form-control" id="password exampleFormControlInput1" name="password" placeholder="Enter your password again!" required>
+</div>
+{% csrf_token %}
+<div class="col-12">
+    <button class="btn btn-primary" type="submit">Authenticate</button>
+</div>
+</form>
+</div>
+{% endblock body %}

@@ -1,0 +1,21 @@
+{% extends 'basic.html' %}
+{% block title %} Login {% endblock title %}
+{% block body %}
+<div class="container my-3">
+<h3>Login</h3>
+<form action="/handlelogin" method="post"> {% csrf_token %}
+<div class="mb-3">
+  <label for="loginusername FormControlInput1" class="form-label">Username</label>
+  <input type="text" class="form-control" id="loginusername exampleFormControlInput1" name="loginusername" placeholder="Enter your email address" required>
+</div>
+<div class="mb-3">
+  <label for="loginpassword FormControlInput1" class="form-label">Password</label>
+  <input type="password" class="form-control" id="loginpassword exampleFormControlInput1" name="loginpassword" placeholder="Enter your Password" required>
+</div>
+{% csrf_token %}
+<div class="col-12">
+    <button class="btn btn-primary" type="submit">Authenticate</button>
+</div>
+</form>
+</div>
+{% endblock body %}

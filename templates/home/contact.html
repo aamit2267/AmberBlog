@@ -1,13 +1,15 @@
 {% extends 'basic.html' %}
 
 {% block title %} Contact {% endblock title %}
+{% block contactactive %} active {% endblock contactactive %}
 {% block body %}
 <div class="container my-3">
 <h3>Contact Us</h3>
 <form class="row g-3 needs-validation" method="post" action="/contact" novalidate>
+{% csrf_token %}
   <div class="col-md-4">
     <label for="validationCustom01" class="form-label">First name</label>
-    <input type="text" class="form-control" id="validationCustom01" required>
+    <input type="text" class="form-control" name="first_name" id="validationCustom01" required>
     <div class="valid-feedback">
       Looks good!
     </div>
@@ -15,7 +17,7 @@
   <br>
   <div class="col-md-4">
     <label for="validationCustom02" class="form-label">Last name</label>
-    <input type="text" class="form-control" id="validationCustom02" required>
+    <input type="text" class="form-control" name="last_name" id="validationCustom02" required>
     <div class="valid-feedback">
       Looks good!
     </div>
@@ -23,7 +25,7 @@
   <br>
   <div class="col-md-6">
     <label for="email validationCustom03" class="form-label">Email Address</label>
-    <input type="email" class="form-control" id="email validationCustom03" required>
+    <input type="email" class="form-control" name="email" id="email validationCustom03" required>
     <div class="invalid-feedback">
       Please provide a valid email-id.
     </div>
@@ -31,7 +33,7 @@
   <br>
   <div class="col-md-6">
     <label for="phone validationCustom03" class="form-label">Phone Number</label>
-    <input type="phone" class="form-control" id="phone validationCustom03" required>
+    <input type="phone" class="form-control" name="phone" id="phone validationCustom03" required>
     <div class="invalid-feedback">
       Please provide a valid email-id.
     </div>
@@ -39,21 +41,9 @@
   <br>
   <div class="col-md-6">
     <label for="content validationCustom03" class="form-label">Describe your issue</label>
-    <textarea type="text" class="form-control" id="content validationCustom03"cols="30" row="10" required></textarea>
+    <textarea type="text" class="form-control" name="issue" id="content validationCustom03"cols="30" row="10" required></textarea>
     <div class="invalid-feedback">
       Please provide a valid email-id.
-    </div>
-  </div>
-  <br>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-      <label class="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
-      </label>
-      <div class="invalid-feedback">
-        You must agree before submitting.
-      </div>
     </div>
   </div>
   <br>
