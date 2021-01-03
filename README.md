@@ -1,4 +1,4 @@
-# MLHBlog
+# AmberBlog
 This website is based on a simple django-framework.
 
 # Installation
@@ -8,7 +8,7 @@ You should have python 3.8.5 and git installed in your system. if you dont have 
 
 Then, You have to clone this repository by using command in your terminal:
 
-```git clone https://www.github.com/aamit2267/MLHBlog```
+```git clone https://www.github.com/aamit2267/AmberBlog```
 
 After installing python in your system, you need to install all the dependencies that this project requires by simply running this command in your terminal:
 
